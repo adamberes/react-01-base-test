@@ -3,9 +3,12 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+// Boolean-Zustand (z.B. Toggle)
+
 function App() {
   const [count, setCount] = useState(0);
-
+  // Alternative: Text-Zustand
+  const [text, setText] = useState('');
   return (
     <>
       <div>
@@ -16,15 +19,28 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React 66</h1>
+      <h1>Vite + React 6s6</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((count) => count + 1)}
+         style={{ backgroundColor: 'blue', color: 'white' }}
+         >
           count is {count}
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+      <div>
+      <h2>Text-Entry:</h2>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Tipe something..."
+        style={{ padding: '10px', fontSize: '1.1rem', width: '300px' ,
+         backgroundColor: 'blue', color: 'white'}}
+      />
+      <p>You wrote: <strong>{text || 'still nothing'}</strong></p>      </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
