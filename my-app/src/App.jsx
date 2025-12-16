@@ -19,10 +19,10 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React 6s6</h1>
+      <h1>Vite + React 6f6</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}
-         style={{ backgroundColor: 'blue', color: 'white' }}
+         className="button"
          >
           count is {count}
         </button>
@@ -30,15 +30,14 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <div>
+      <div >
       <h2>Text-Entry:</h2>
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Tipe something..."
-        style={{ padding: '10px', fontSize: '1.1rem', width: '300px' ,
-         backgroundColor: 'blue', color: 'white'}}
+        className="text"
       />
       <p>You wrote: <strong>{text || 'still nothing'}</strong></p>      </div>
       <p className="read-the-docs">
