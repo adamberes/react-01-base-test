@@ -33,6 +33,18 @@
   }
 }
 
+.button { 
+  background-color: bisque;
+  color: black }
+
+.text {
+  padding: 10px;
+  font-size: 1.1rem;
+  width: 300px ;
+  background-color: bisque;
+  color: black;
+}
+
 .card {
   padding: 2em;
 }
